@@ -1,5 +1,8 @@
-n = 20
-c = bin(n)
-print(c)
+from flask import Flask
+app = Flask(__name__)
 
-our_bin = input("Enter Binary Value")
+@app.route('/')
+def hello_world():
+ return '<h1>Hello World</h1>'
+if __name__ == '__main__':
+ app.run()
