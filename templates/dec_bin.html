@@ -23,6 +23,10 @@
           <button type="submit" class="btn">Convert Value Entered to Binary</button>
           <br><br>
         </div>
+          {% if result is not none %}
+          <label>Result:</label>
+          <input type="text" value="{{ result }}" readonly>
+          {% endif %}
          <div class="form-group">
           <label for="fullname">Binary Value Output</label>
           <input type="text" id="fullname" placeholder="Binary Value" required>
