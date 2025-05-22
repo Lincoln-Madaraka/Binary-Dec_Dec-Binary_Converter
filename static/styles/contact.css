@@ -1,25 +1,30 @@
 body {
-  margin: 0;
+  margin: 25px;
   font-family: 'Segoe UI', sans-serif;
   background-color: #121212;
   color: #f1f1f1;
-  }
-contact-wrapper {
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 25px;
+}
+
+.contact-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 80px 40px;
+  padding: 8px 80px;
   gap: 40px;
 }
 
 .form-section, .contact-section {
   flex: 1;
-  min-width: 300px;
+  min-width: 30px !important;
   background-color: #1e1e1e;
-  padding: 30px;
+  padding: 80px 80px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  justify-content: center;
 }
 
 .form-section h2, .contact-content h2 {
@@ -39,6 +44,7 @@ contact-wrapper {
   display: block;
   margin-bottom: 5px;
   color: #ccc;
+  text-align: center;
 }
 
 .form-group input,
@@ -50,6 +56,7 @@ contact-wrapper {
   color: #fff;
   border-radius: 6px;
   resize: vertical;
+  text-align: center;
 }
 
 .form-group input:focus,
@@ -59,7 +66,8 @@ contact-wrapper {
 }
 
 .centered-btn-wrapper {
-  text-align: left;
+  text-align: center;
+  padding: 25px;
 }
 
 .btn {
