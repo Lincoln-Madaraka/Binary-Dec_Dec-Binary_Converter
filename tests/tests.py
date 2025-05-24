@@ -80,8 +80,12 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/bin_dec', methods=['GET', 'POST'])
+def bin_dec():
     message = ""
     decimal_value = ""
     if request.method == 'POST':
@@ -90,10 +94,10 @@ def index():
             message = "❌ Invalid input: only 0 and 1 are allowed."
         elif all(char in '01' for char in binary_value) and binary_value:
             decimal_value = str(int(binary_value, 2))
-            message = "✅ Binary is valid. Converted to decimal below."
+            message = "A valid binary number was entered."
         else:
-            message = "⚠️ Please enter a binary number."
-    return render_template('binary_checker.html', message=message, decimal_value=decimal_value)
+            message = "Please enter a binary number."
+    return render_template('bin_dec.html', message=message, decimal_value=decimal_value)
 
 if __name__ == '__main__':
     app.run(debug=True)

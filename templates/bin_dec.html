@@ -14,17 +14,25 @@
     <section class="contact-wrapper">
     <div class="form-section">
       <h2>Convert Binary To Decimal</h2>
-      <form>
+      <form method="POST" action="/bin_dec">
         <div class="form-group">
           <label for="fullname">Enter Binary Value (max 8 digits)</label>
-          <input type="text" id="fullname" placeholder="Enter Binary..(0's ad 1's)" required>
+          <input type="text" id="binaryInput" name="binaryInput" placeholder="Enter Binary..(0's ad 1's)" required>
         </div>
         <div class="centered-btn-wrapper">
           <button type="submit" class="btn">Convert Value Entered to Decimal</button>
         </div>
-        <div class="form-group">
-          <label for="emailaddress">Decimal Value Output</label>
-          <input type="email" id="emailaddress" placeholder="Decimal Value" required>
+         <div class="form-group mt-3">
+          <!-- Display error or success message -->
+          {% if message %}
+            <div class="alert alert-info">{{ message }}</div>
+          {% endif %}
+
+          <!--Show decimal value if conversion is successful -->
+          {% if decimal_value %}
+            <label>Decimal Equivalent:</label>
+            <input type="text" class="form-control" value="{{ decimal_value }}" readonly>
+          {% endif %}
         </div>
       </form>
     </div>

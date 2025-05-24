@@ -14,22 +14,26 @@
     <section class="contact-wrapper">
     <div class="form-section">
       <h2>Convert Decimal to Binary</h2>
-      <form>
+      <form method="POST" action="dec_bin">
         <div class="form-group">
           <label for="fullname">Enter Decimal Number (max value 255)</label>
-          <input type="text" id="fullname" placeholder="Enter Decimal Value.." required>
+          <input type="text" id="decimalInput" name="decimalInput" placeholder="Enter Decimal Value.." required>
         </div>
         <div class="centered-btn-wrapper">
           <button type="submit" class="btn">Convert Value Entered to Binary</button>
           <br><br>
         </div>
-          {% if result is not none %}
-          <label>Result:</label>
-          <input type="text" value="{{ result }}" readonly>
+        <div class="form-group mt-3">
+          <!-- Display error or success message -->
+          {% if message %}
+            <div class="alert alert-info">{{ message }}</div>
           {% endif %}
-         <div class="form-group">
-          <label for="fullname">Binary Value Output</label>
-          <input type="text" id="fullname" placeholder="Binary Value" required>
+
+          <!--Show binary value if conversion is successful -->
+          {% if binary_value %}
+            <label>Binary Equivalent:</label>
+            <input type="text" class="form-control" value="{{ binary_value }}" readonly>
+          {% endif %}
         </div>
       </form>
     </div>

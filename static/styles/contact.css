@@ -112,3 +112,7 @@ body {
   margin-right: 8px;
   font-size: 1.2rem;
 }
+.alert{
+  text-align: center;
+  font-weight: bold;
+}
