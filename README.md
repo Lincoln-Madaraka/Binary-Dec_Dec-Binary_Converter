@@ -1,7 +1,7 @@
 
 # 🔁 Binary ↔ Decimal Converter
 
-🚀 **Live Demo**: [Check it out on Replit!](https://replit.com/@YourUsername/YourAppName)
+🚀 **Live Demo**: [Check it out on Render!]()
 
 Welcome to a lightweight yet powerful web app that makes converting between **binary and decimal numbers** a breeze! Built using **Flask (Python), HTML, and CSS**, this tool is perfect for students, developers, and techies who deal with binary logic or number systems.
 
@@ -27,7 +27,7 @@ All routing and backend logic is handled smoothly using **Flask**, and the UI is
 * 🐍 Python (Flask)
 * 🖼️ HTML5
 * 🎨 CSS3 + Bootstrap
-* 🔄 Hosted on **Replit**
+* 🔄 Hosted on **Render**
 
 ---
 
