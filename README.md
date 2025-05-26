@@ -47,7 +47,7 @@ requirements.txt
 
 ---
 
-## 🌟 Future Additions
+## 🌟 Future Additions Sooner
 
 We’re just getting started! Planned updates include:
 
